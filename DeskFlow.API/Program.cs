@@ -1,9 +1,8 @@
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
@@ -21,3 +20,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+using DeskFlow.API.Repositories;
+using DeskFlow.API.Services;
+
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
