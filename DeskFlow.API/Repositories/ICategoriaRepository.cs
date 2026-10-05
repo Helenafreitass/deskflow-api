@@ -1,4 +1,4 @@
-ICategoriaRepository.csusing DeskFlow.API.Models.Entities;
+using DeskFlow.API.Models.Entities;
 
 namespace DeskFlow.API.Repositories;
 
